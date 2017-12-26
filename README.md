@@ -7,4 +7,4 @@ A path to a folder will return all names from .meb files in that folder
 
 A path to a singular file will return the name of said .meb
 
-Prefixing your custom offset size with `rename`, for example `rename 15` will rename each file to it's true name
+Prefixing your custom offset size with `rename `, for example `rename 15` will rename each file to it's true name
