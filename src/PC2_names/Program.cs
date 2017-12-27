@@ -10,12 +10,12 @@ namespace PC2_names
     class Program
     {
         internal static bool shouldRename = false;
+        internal static char[] allowedChars = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
 
         private static void ReadNameFromOffset(string filePath, int offsetSize = 25)
         {
             try
             {
-                char[] allowedChars = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
                 string returnSTR = "";
                 byte[] offsetRead = new byte[offsetSize];
                 using (BinaryReader reader = new BinaryReader(new FileStream(filePath, FileMode.Open)))
