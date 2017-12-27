@@ -16,6 +16,7 @@ namespace PC2_names
         {
             try
             {
+                if (Path.GetFileName(filePath).Contains("dmg")) { return; }
                 string returnSTR = "";
                 byte[] offsetRead = new byte[offsetSize];
                 using (BinaryReader reader = new BinaryReader(new FileStream(filePath, FileMode.Open)))
